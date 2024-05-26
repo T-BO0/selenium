@@ -1,0 +1,11 @@
+{   
+    "baseUrl":"https://magento.softwaretestingboard.com/",
+
+    "firstname":"testName",
+    "lastname": "testLastName",
+    "password":"Pa$$w0rd",
+    "wrongPassword":"Wr0ngPa$$W0rd",
+    "quantity": "1",
+
+    "usedEmail":"p5312kvs@fthcapital.com"
+}
