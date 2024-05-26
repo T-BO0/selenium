@@ -11,7 +11,7 @@ import pages.WelcomePage;
 public class TestCart extends BaseTest {
 
     @Step
-    @Test(priority = 5)
+    @Test(groups = "positive")
     public void testAddCart() {
         // setup
         var welcomePage = new WelcomePage();
@@ -34,7 +34,7 @@ public class TestCart extends BaseTest {
     }
 
     @Step
-    @Test(priority = 6)
+    @Test(groups = "negative")
     public void testAddCartWithInvalidQuantityShouldFail() {
         // setup
         var welcomePage = new WelcomePage();

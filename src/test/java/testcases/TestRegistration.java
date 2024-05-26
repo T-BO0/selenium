@@ -14,7 +14,7 @@ import pages.WelcomePage;
 public class TestRegistration extends BaseTest {
 
     @Step
-    @Test(priority = 0)
+    @Test(groups = "positive")
     public void testRegistrationShouldRegisterAUser() {
         // setup
         ((ObjectNode) testData).put("email", GenerateRandomEmail.generateRandomEmail());
@@ -42,7 +42,7 @@ public class TestRegistration extends BaseTest {
     }
 
     @Step
-    @Test(priority = 1)
+    @Test(groups = "negative")
     public void testPasswordsDoNotMatch() {
         // setup
         ((ObjectNode) testData).put("email", GenerateRandomEmail.generateRandomEmail());
@@ -65,7 +65,7 @@ public class TestRegistration extends BaseTest {
     }
 
     @Step
-    @Test(priority = 2)
+    @Test(groups = "negative")
     public void testAlreadyTakenUserShouldReturnErrorMessage() {
         // setup
         var firstname = super.testData.get("firstname").asText();

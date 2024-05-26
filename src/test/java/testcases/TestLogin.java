@@ -12,8 +12,8 @@ import pages.WelcomePage;
 public class TestLogin extends BaseTest {
 
     @Step
-    @Test(priority = 3)
-    public void testRegister() {
+    @Test(groups = "positive")
+    public void testLogin() {
         // setup
         var password = super.testData.get("password").asText();
         var email = super.testData.get("usedEmail").asText();
@@ -35,7 +35,7 @@ public class TestLogin extends BaseTest {
     }
 
     @Step
-    @Test(priority = 4)
+    @Test(groups = "negative")
     public void testShouldFailLogInWithWrongCredentials() {
         // setup
         var password = super.testData.get("wrongPassword").asText();
