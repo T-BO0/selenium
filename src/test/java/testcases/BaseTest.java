@@ -21,14 +21,14 @@ public class BaseTest {
     public BaseTest() {
     }
 
-    @BeforeClass
+    @BeforeClass(groups = { "positive", "negative" })
     public void setUp() throws IOException {
         testData = WorkingWithJson.getResourcesFromJson("testdata/TestData.json");
         var baseUrl = testData.get("baseUrl").asText();
         SingletonDriver.getDriver().get(baseUrl);
     }
 
-    @AfterSuite
+    @AfterSuite(groups = { "positive", "negative" })
     public void tearDown() {
         SingletonDriver.getDriver().quit();
     }

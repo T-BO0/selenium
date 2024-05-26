@@ -4,7 +4,7 @@
     <test name="Test2">
         <groups>
             <run>
-                <exclude name="negative"> </exclude>
+                <include name="positive"> </include>
             </run>
         </groups>
         <classes>
